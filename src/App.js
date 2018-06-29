@@ -1,21 +1,16 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
-}
+const App = () => (
+  <div className="App">
+    <header className="App-header">
+      <h1 className="App-title">{new Date(Date.now()).toLocaleTimeString()}</h1>
+      This shouldn't be reloaded each time.
+    </header>
+    <p className="App-intro">
+      This also shouldn't be reloaded each time.
+    </p>
+  </div>
+);
 
 export default App;
